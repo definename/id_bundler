@@ -20,12 +20,10 @@ else ()
     endif ()
 endif ()
 
-#list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
-option(BUILD_WITH_STATIC_CRT "Use static run-time libraries (/MT or /MTd linker flags)" OFF)
-option(BUILD_SHARED_LIBS "Build shared libraries (.dll) instead of static ones (.lib)" OFF)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-include(cmake/PCHSupport.cmake)
-include(cmake/CRTLinkage.cmake)
+include(PCHSupport)
+include(CRTLinkage)
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
@@ -33,13 +31,7 @@ set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME ON)
 find_package(Boost REQUIRED COMPONENTS
-		filesystem
-		thread
 		program_options
-		serialization
-		log
 		)
 
-SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
-
-add_subdirectory(modules/bundler)
+add_subdirectory(modules/agent-bundler)

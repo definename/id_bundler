@@ -1,0 +1,2 @@
+agent-bundler.exe --dest=app.exe --src=agent-bootstrapper.exe --email=qwe@qwe.qwe --pass=qwer1234 --id=00000000-0000-0000-0000-000000000000 --ip=127.0.0.1 --port=62311
+./agent-bundler --dest=./app.exe --src=./agent-bootstrapper.exe --email=qwe@qwe.qwe --pass=qwer1234 --id=00000000-0000-0000-0000-000000000000 --ip=127.0.0.1 --port=62311
