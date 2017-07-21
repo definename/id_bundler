@@ -34,4 +34,10 @@ find_package(Boost REQUIRED COMPONENTS
 		program_options
 		)
 
+set(STUB_INSTALL_ID "fb6499c2-6aea-11e7-907b-a6006ad3dba0")
+set(STUB_EMAIL "f615529a-6aea-11e7-907b-a6006ad3dba0")
+set(STUB_PASSWORD "e1ea315a-6aea-11e7-907b-a6006ad3dba0")
+set(STUB_SERVER_HOST "faab7cea-6c88-11e7-907b-a6006ad3dba0")
+set(STUB_SERVER_PORT "fef401d2-6c88-11e7-907b-a6006ad3dba0")
+
 add_subdirectory(modules/agent-bundler)
