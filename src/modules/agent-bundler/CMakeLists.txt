@@ -1,5 +1,11 @@
 project(agent-bundler)
 
+if("${CMAKE_SIZEOF_VOID_P}" EQUAL "8")
+  message(STATUS "${PROJECT_NAME} 64 bit") 
+else()
+  message(STATUS "${PROJECT_NAME} 32 bit") 
+endif()
+
 configure_file(src/res/BundlerStub.h.cmake BundlerStub.h @ONLY)
 
 set(HEADER_FILES
